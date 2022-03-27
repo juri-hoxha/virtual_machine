@@ -27,8 +27,13 @@ int main(int argc, char *argv[])
   int c = Columns.size(); // # of columns in first vector
 
 	int n; //number of iterations
+
+ if (argc == 2){
   char* N = argv[1]; // read from command line
   n = atoi(N); // convert char to int
+ } else {
+  n = 1;
+ }
 
 for (int k=0; k<n; k++){
   for (int i=0; i<r; i++){
