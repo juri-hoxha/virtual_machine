@@ -2,7 +2,7 @@
 using std::vector;
 #include <iostream>
 using std::cout;
-using std::cin;
+#include <stdlib.h>
 
 vector<vector<bool> > world = {
 {0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
@@ -26,10 +26,11 @@ int main(int argc, char *argv[])
   vector<bool> Columns = world[0]; //first vector
   int c = Columns.size(); // # of columns in first vector
 
-	size_t n; //number of iterations
-	cin >> n; //read on standard input
+	int n; //number of iterations
+  char* N = argv[1]; // read from command line
+  n = atoi(N); // convert char to int
 
-for (size_t k=0; k<n; k++){
+for (int k=0; k<n; k++){
   for (int i=0; i<r; i++){
    for (int j=0; j<c; j++){
     size_t nb = 0;
